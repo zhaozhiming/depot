@@ -1,0 +1,2 @@
+1.redirect_to use product(domain)_url, and other use product_path
+2.controller post method use create, get method use new 
