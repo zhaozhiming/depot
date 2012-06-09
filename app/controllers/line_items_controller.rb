@@ -78,9 +78,16 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
 
+		@cart = current_cart
+
     respond_to do |format|
-      format.html { redirect_to line_items_url }
-      format.json { head :no_content }
+			if @cart.total_price == 0
+		    format.html { redirect_to(store_url, :notice => 'Your cart is currently empty') }
+		    format.json { head :no_content }
+			else
+		    format.html { redirect_to cart_url }
+		    format.json { head :no_content }
+			end
     end
   end
 end
