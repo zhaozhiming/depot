@@ -1,0 +1,8 @@
+$('#cart').html("<%= escape_javascript(render(@cart)) %>");
+
+<% if @cart.total_items == 0 %>
+	$('#cart').slideUp();	
+<% end %>
+
+
+$('#current_item').css({ 'background-color': "#88ff88" }).animate({ 'background-color': '#114411'}, 1000);
