@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Check
+
+two:
+  name: Credit cart
+
+three:
+  name: Purchase order
