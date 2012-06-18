@@ -2,7 +2,8 @@
 
 one:
   product_id: ruby
-  order: one
+  order_id: one
+  cart_id: one
   quantity: 1
 
 two:
