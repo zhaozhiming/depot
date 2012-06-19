@@ -9,31 +9,25 @@ Depot::Application.routes.draw do
   end
 
   get "admin/index"
-
   get "sessions/new"
-
   get "sessions/create"
-
   get "sessions/destroy"
-
-  resources :users
-
-  resources :payment_types
-
-  resources :orders
-
-  resources :line_items
-
-  resources :carts
-
   get "store/index"
 
-  resources :products do
-    get :who_bought, :on => :member
-  end
+  scope '(:locale)' do
+    resources :users
+    resources :payment_types
+    resources :orders
+    resources :line_items
+    resources :carts
 
-  resources :line_items do
-    put 'decrement', :on => :member
+    resources :products do
+      get :who_bought, :on => :member
+    end
+    resources :line_items do
+      put 'decrement', :on => :member
+    end
+    root :to => 'store#index', :as => 'store'
   end
 
   # The priority is based upon order of creation:
@@ -85,7 +79,7 @@ Depot::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
- 	root :to => 'store#index', :as => 'store'
+ 	
 
   # See how all your routes lay out with "rake routes"
 
