@@ -12,7 +12,7 @@
 <body id="store" >
 	<div id="banner" >
 		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookshelf" %>
+		<%= @page_title || t('.title') %>
 	</div>
 	<div id="columns" >
 		<div id="side" >
@@ -24,11 +24,11 @@
 				<% end %>
 			</div>
 
-			<a href="http://www...." >Home</a><br />
-			<a href="http://www..../faq" >Questions</a><br />
-			<a href="http://www..../news" >News</a><br />
-			<a href="http://www..../contact" >Contact</a><br />
-			<div id="today">Today: <%= Time.now.strftime("%Y-%m-%d") %></div>
+			<a href="http://www...." ><%= t('.home' ) %></a><br />
+			<a href="http://www..../faq" ><%= t('.questions' ) %></a><br />
+			<a href="http://www..../news" ><%= t('.news' ) %></a><br />
+			<a href="http://www..../contact" ><%= t('.contact' ) %></a><br />
+			<div id="today"><%= t('.today' ) %>: <%= Time.now.strftime("%Y-%m-%d") %></div>
 			
 			<% if session[:user_id] %>
 				<br /> 
