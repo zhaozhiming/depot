@@ -15,6 +15,7 @@ cn:
     cart:
       title: "你的购物车"
       checkout: "付账"
+      empty: "清空购物车"
   number:
     currency:
       format:
@@ -52,4 +53,8 @@ cn:
       header:
         one: "保存%{model}时发生了1个错误"
         other: "保存%{model}时发生了%{count}个错误"
-  thanks: "谢谢你的订单"      
+  thanks: "谢谢你的订单"
+  payment_type:
+    Check: "现金"
+    Credit card: "信用卡"
+    Purchase order: "购物券"

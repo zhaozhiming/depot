@@ -93,6 +93,7 @@ Product.create(:title => '重构:改善既有代码的设计',
   :price => 68.00,
   :locale => 'cn')
 
+PaymentType.delete_all
 PaymentType.create(:name => 'Check')
 PaymentType.create(:name => 'Credit card')
 PaymentType.create(:name => 'Purchase order')

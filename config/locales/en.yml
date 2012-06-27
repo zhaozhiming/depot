@@ -38,3 +38,7 @@ en:
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
   thanks: "Thank you for your order."      
+  payment_type:
+    Check: "Check"
+    Credit card: "Credit card"
+    Purchase order: "Purchase order"
